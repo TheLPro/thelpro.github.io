@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&family=Source+Code+Pro:wght@300;800&display=swap');
+
+:root {
+    --font: 'Sarala';
+    --text: #040301;
+    --bg: #FFFDFB;
+    --primary: #F49434;
+    --secondary: #8DCFCF;
+    --accent: #FF8400;
+}
