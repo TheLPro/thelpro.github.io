@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&family=Source+Code+Pro:wght@300;800&display=swap');
+@font-face {
+    font-family: 'Minecraft';
+    src: url('assets/minecraft.woff2') format('woff2');
+}
 
 :root {
     --font: 'Sarala';

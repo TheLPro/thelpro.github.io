@@ -2,6 +2,8 @@
 
 const varToString = varObj => Object.keys(varObj)[0];
 const button = document.querySelector("#theme");
+const moon = document.querySelector("#dark");
+const sun = document.querySelector("#light");
 window.localStorage.setItem("theme", "light");
 
 var light = new Map();
@@ -13,7 +15,7 @@ light.set("--secondary", "#8DCFCF");
 var dark = new Map();
 
 dark.set("--text", "#FEFDFB");
-dark.set("--bg", "#0F0E0B");
+dark.set("--bg", "#212225");
 dark.set("--primary", "#CB6B0B");
 dark.set("--secondary", "#347A7A");
 
@@ -34,7 +36,23 @@ function buttonClick() {
     }
 }
 
+function moonClick() {
+    buttonClick();
+    moon.style.display = "none";
+    sun.style.display = "block";
+}
+
+function sunClick() {
+    buttonClick();
+    moon.style.display = "block";
+    sun.style.display = "none";
+}
+
 function updateTheme(theme) {
     window.localStorage.setItem("theme", theme);
 }
+
 button.addEventListener("click", buttonClick);
+moon.addEventListener("click", moonClick);
+sun.addEventListener("click", sunClick);	
+console.log(window.innerWidth);

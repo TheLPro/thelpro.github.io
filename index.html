@@ -7,13 +7,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&family=Source+Code+Pro:wght@300;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    no
+    <nav class="icons">
+        <img src="img/sun-svgrepo-com.svg" alt="light" class="icon" id="light">
+        <img src="img/moon-svgrepo-com.svg" alt="dark" class="icon" id="dark">
+    </nav>
+    <div class="w3-container conatiner">
+        <div class="column text">
+            <h1 class="title">TheLPro</h1>
+            <p class="w3-xlarge desc">Lorem ipsum dolor sit amet consectetur. Enim phasellus imperdiet vel leo quis a arcu velit pretium. Donec massa eget hendrerit facilisi. Ut urna arcu vel feugiat. </p>
+        </div>
+        <div class="column threed">
+            <canvas id="skin_container" data-engine="three.js r156" width="600" height="800"></canvas>
+        </div>
+    </div>
+    <button id="theme" style="display: none;"></button>
+    <script src="node_modules/skinview3d/bundles/skinview3d.bundle.js"></script>
     <script src="index.js"></script>
     <script>
         //progress page, comment out if not necessary
-        window.location.href = "work.html"
+        //window.location.href = "work.html"
+
+        //Skin viewer
+
+        let skinViewer = new skinview3d.SkinViewer({
+            canvas: document.getElementById("skin_container"),
+            width: 600,
+            height: 800,
+            skin: "img/TheLPro.png"
+        });
+        skinViewer.fov = 70;
+        skinViewer.zoom = 0.6;
+        skinViewer.animation = new skinview3d.IdleAnimation();
+        skinViewer.animation.paused = false;
+        skinViewer.animation.speed = 1;
+
     </script>
+    <script src="https://kit.fontawesome.com/c23c5103b5.js" crossorigin="anonymous"></script>
 </body>
 </html>

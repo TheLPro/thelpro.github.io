@@ -1,0 +1,55 @@
+@import url('vars.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--bg);
+    color: var(--text);
+    height: 100%;
+    margin: 0;
+    font-family: var(--font);
+}
+.container {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.text {
+    font-size: 2rem;
+    margin-top: 20vh;
+}
+.title {
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    color: var(--accent);
+}
+.threed {
+    margin-top: 10vh;
+}
+@media screen and (max-width: 926px) {
+    .threed {
+        display: none;
+    }
+    .column {
+        width: 90%;
+    }
+}
+.icons {
+    position: absolute;
+}
+.icon {
+    margin-top: 3%;
+    margin-left: 1%;
+}
+#light {
+    display: none;
+}

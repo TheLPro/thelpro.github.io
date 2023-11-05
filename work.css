@@ -1,7 +1,8 @@
 @import url('vars.css');
 
 * {
-    font-family: var(--font);
+    box-sizing: border-box;
+    transition: background-color 0.4s ease, color 0s ease;
 }
 
 html, body {
@@ -9,6 +10,8 @@ html, body {
     color: var(--text);
     height: 100%;
     margin: 0;
+    font-family: var(--font);
+    
 }
 
 section {
@@ -21,7 +24,7 @@ section {
 .container {
     position: relative;
     width: 60%;
-    height: 50%;
+    height: 65%;
     background-color: #fff;
     border: 2px solid var(--accent);
     border-radius: 10px;
