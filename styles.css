@@ -49,6 +49,7 @@ html, body {
 .icon {
     margin-top: 3%;
     margin-left: 1%;
+    cursor: pointer;
 }
 #light {
     display: none;
@@ -58,6 +59,7 @@ html, body {
     margin-right: 2%;
     margin-bottom: 5%;
     font-size: 2rem;
+    cursor: pointer;
 }
 canvas {
     overflow: visible;
