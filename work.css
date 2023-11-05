@@ -21,7 +21,7 @@ section {
 .container {
     position: relative;
     width: 60%;
-    height: 60%;
+    height: 50%;
     background-color: #fff;
     border: 2px solid var(--accent);
     border-radius: 10px;
@@ -31,13 +31,13 @@ section {
 
 h1 {
    font-weight: bold; 
-   font-size: 2em;
+   font-size: 4em;
    margin-top: 10%;
 }
 
 h2 {
     font-weight: normal; 
-    font-size: 1.5em;
+    font-size: 2em;
 }
 .buttons {
     margin-top: 3rem;
