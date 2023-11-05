@@ -22,14 +22,21 @@
         </div>
         <div class="column threed">
             <canvas id="skin_container" data-engine="three.js r156" width="600" height="800"></canvas>
+            <!--#FF8400-->
         </div>
+    </div>
+    <div class="controls">
+        <span id="idle"><i class="fa-solid fa-person" style="color: var(--accent);"></i></span>
+        <span id="walk"><i class="fa-solid fa-person-walking" style="color: var(--accent);"></i></span>
+        <span id="run"><i class="fa-solid fa-person-running" style="color: var(--accent);"></i></span>
+        <span id="fly"><i class="fa-solid fa-plane" style="color: var(--accent);"></i></span>
     </div>
     <button id="theme" style="display: none;"></button>
     <script src="node_modules/skinview3d/bundles/skinview3d.bundle.js"></script>
     <script src="index.js"></script>
     <script>
         //progress page, comment out if not necessary
-        window.location.href = "work.html"
+        //window.location.href = "work.html"
 
         //Skin viewer
 
@@ -44,6 +51,37 @@
         skinViewer.animation = new skinview3d.IdleAnimation();
         skinViewer.animation.paused = false;
         skinViewer.animation.speed = 1;
+        skinViewer.loadCape("img/mojang_cape.png");
+
+        var idle = document.getElementById("idle");
+        var walk = document.getElementById("walk");
+        var run = document.getElementById("run");
+        var fly = document.getElementById("fly");
+
+        idle.addEventListener("click", function() {
+            skinViewer.animation = new skinview3d.IdleAnimation();
+            skinViewer.animation.paused = false;
+            skinViewer.animation.speed = 1;
+            skinViewer.loadCape("img/mojang_cape.png");
+        });
+        walk.addEventListener("click", function() {
+            skinViewer.animation = new skinview3d.WalkingAnimation();
+            skinViewer.animation.paused = false;
+            skinViewer.animation.speed = 1;
+            skinViewer.loadCape("img/mojang_cape.png");
+        });
+        run.addEventListener("click", function() {
+            skinViewer.animation = new skinview3d.RunningAnimation();
+            skinViewer.animation.paused = false;
+            skinViewer.animation.speed = 1;
+            skinViewer.loadCape("img/mojang_cape.png");
+        });
+        fly.addEventListener("click", function() {
+            skinViewer.animation = new skinview3d.FlyingAnimation();
+            skinViewer.animation.paused = false;
+            skinViewer.animation.speed = 1;
+            skinViewer.loadCape("img/mojang_cape.png", {backEquipment: "elytra"});
+        });
 
     </script>
     <script src="https://kit.fontawesome.com/c23c5103b5.js" crossorigin="anonymous"></script>

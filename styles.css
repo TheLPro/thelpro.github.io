@@ -53,3 +53,12 @@ html, body {
 #light {
     display: none;
 }
+.controls {
+    text-align: right;
+    margin-right: 2%;
+    margin-bottom: 5%;
+    font-size: 2rem;
+}
+canvas {
+    overflow: visible;
+}
