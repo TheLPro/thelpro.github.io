@@ -20,10 +20,10 @@ section {
 
 .container {
     position: relative;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 2px solid var(--accent);
     border-radius: 10px;
     text-align: center;
     background-color: var(--bg);
@@ -31,26 +31,29 @@ section {
 
 h1 {
    font-weight: bold; 
-   font-size: 3rem;
+   font-size: 2em;
+   margin-top: 10%;
 }
 
 h2 {
     font-weight: normal; 
+    font-size: 1.5em;
 }
 .buttons {
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 button {
     bottom: 0;
     right: 0;
     margin: 2rem;
     padding: 1rem 2rem;
-    border: 1px solid #000;
     border-radius: 5px;
     background-color: #fff;
     color: var(--text);
     font-size: 1.2rem;
     cursor: pointer;
+    border: none;
 }
 #github {
     background-color: var(--secondary);
