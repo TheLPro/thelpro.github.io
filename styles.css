@@ -36,7 +36,10 @@ html, body {
     margin-top: 10vh;
 }
 @media screen and (max-width: 926px) {
-    .threed, .controls {
+    .threed {
+        display: none;
+    }
+    .controls {
         display: none;
     }
     .column {
