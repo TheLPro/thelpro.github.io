@@ -4,6 +4,8 @@ const varToString = varObj => Object.keys(varObj)[0];
 const button = document.querySelector("#theme");
 const moon = document.querySelector("#dark");
 const sun = document.querySelector("#light");
+const about = document.querySelector("#about");
+const contact = document.querySelector("#contact");
 window.localStorage.setItem("theme", "light");
 
 var light = new Map();
@@ -56,3 +58,14 @@ button.addEventListener("click", buttonClick);
 moon.addEventListener("click", moonClick);
 sun.addEventListener("click", sunClick);	
 console.log(window.innerWidth);
+
+contact.addEventListener("click", function() {
+
+    alert("Working on it! (Contact me TheLPro on Discord)")
+
+});
+about.addEventListener("click", function() {
+
+    alert("Working on it!")
+
+});

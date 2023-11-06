@@ -65,5 +65,26 @@ html, body {
     cursor: pointer;
 }
 canvas {
-    overflow: visible;
+    border-radius: 20px;
+    cursor: grab;
+}
+canvas:active {
+    cursor: grabbing;
+}
+.buttons {
+    margin-top: 50px;
+}
+button {
+    border-radius: 10px;
+    border: none;
+    color: var(--text);
+    padding: 15px 20px 15px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+#about {
+    background-color: var(--primary);
+}
+#contact {
+    background-color: var(--secondary);
 }
