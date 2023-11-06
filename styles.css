@@ -79,6 +79,7 @@ html, body {
 canvas {
     border-radius: 20px;
     cursor: grab;
+    margin-inline: 10px;
 }
 canvas:active {
     cursor: grabbing;
