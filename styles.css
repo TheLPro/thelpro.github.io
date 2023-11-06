@@ -10,6 +10,7 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: var(--font);
+    overflow: hidden;
 }
 .container {
     content: "";
@@ -20,10 +21,12 @@ html, body {
     float: left;
     width: 50%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .text {
     font-size: 2rem;
-    margin-top: 20vh;
+    margin-top: 12vh;
 }
 .title {
     font-weight: bold;
@@ -33,7 +36,9 @@ html, body {
     color: var(--accent);
 }
 .threed {
-    margin-top: 10vh;
+    height: 80%;
+    align-items: center;
+    margin-block: center;
 }
 @media screen and (max-width: 926px) {
     .threed {
@@ -44,6 +49,12 @@ html, body {
     }
     .column {
         width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
     }
 }
 .icons {
@@ -59,8 +70,9 @@ html, body {
 }
 .controls {
     text-align: right;
-    margin-right: 2%;
-    margin-bottom: 5%;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
     font-size: 2rem;
     cursor: pointer;
 }
@@ -73,6 +85,8 @@ canvas:active {
 }
 .buttons {
     margin-top: 50px;
+    display: flex;
+    gap: 2rem;
 }
 button {
     border-radius: 10px;

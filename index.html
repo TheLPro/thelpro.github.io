@@ -43,7 +43,7 @@
             <div class="buttons">
                 <button id="about" class="button">About Me</button>
                 <button id="contact" class="button">Contact Me</button>
-                </div>
+             </div>
         </div>
         <div class="column threed">
             <canvas id="skin_container" data-engine="three.js r156" width="800" height="800"></canvas>
@@ -61,15 +61,15 @@
     <script>
         //progress page, comment out if not necessary
         //window.location.href = "work.html"
-
-        alert("Still working on this, please be pacient!");
         
         //Skin viewer
+
+        height = window.innerHeight - 40;
 
         let skinViewer = new skinview3d.SkinViewer({
             canvas: document.getElementById("skin_container"),
             width: 600,
-            height: 800,
+            height: height,
             skin: "img/TheLPro.png"
         });
         skinViewer.fov = 70;
@@ -78,6 +78,7 @@
         skinViewer.animation.paused = false;
         skinViewer.animation.speed = 1;
         skinViewer.loadCape("img/mojang_cape.png");
+        skinViewer.loadPanorama("img/panorama.png");
 
         var idle = document.getElementById("idle");
         var walk = document.getElementById("walk");
