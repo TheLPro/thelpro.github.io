@@ -40,7 +40,7 @@ html, body {
     align-items: center;
     margin-block: center;
 }
-@media screen and (max-width: 926px) {
+@media screen and (max-width: 1179px) {
     .threed {
         display: none;
     }
