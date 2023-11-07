@@ -80,6 +80,10 @@
         skinViewer.loadCape("img/mojang_cape.png");
         skinViewer.loadPanorama("img/panorama.png");
 
+        if (localStorage.getItem("theme") == "dark") {
+            skinViewer.loadPanorama();
+        }
+
         var idle = document.getElementById("idle");
         var walk = document.getElementById("walk");
         var run = document.getElementById("run");
