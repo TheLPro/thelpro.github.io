@@ -19,14 +19,16 @@ html, body {
 }
 .column {
     float: left;
-    width: 50%;
+    width: 45%;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 .text {
     font-size: 2rem;
     margin-top: 12vh;
+    z-index: 1000;
 }
 .title {
     font-weight: bold;
@@ -34,13 +36,14 @@ html, body {
     margin-top: 10%;
     margin-bottom: 5%;
     color: var(--accent);
+    z-index: 1000;
 }
 .threed {
-    height: 80%;
     align-items: center;
     margin-block: center;
+    float: right;
 }
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 980px) {
     .threed {
         display: none;
     }
@@ -57,6 +60,11 @@ html, body {
         flex-direction: column;
     }
 }
+@media screen and (max-height: 900px) {
+    .text {
+        margin-top: 1vh;
+    }
+}
 .icons {
     position: absolute;
 }
@@ -68,18 +76,11 @@ html, body {
 #light {
     display: none;
 }
-.controls {
-    text-align: right;
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    font-size: 2rem;
-    cursor: pointer;
-}
 canvas {
     border-radius: 20px;
     cursor: grab;
     margin-inline: 10px;
+    z-index: 1;
 }
 canvas:active {
     cursor: grabbing;
@@ -102,4 +103,37 @@ button {
 }
 #contact {
     background-color: var(--secondary);
+}
+.controls {
+    background-color: var(--bg);
+    padding: 10px 20px 10px 10px;
+    text-align: right;
+    position: absolute;
+    display: inline-block;
+    font-size: 2rem;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    z-index: 100000;
+}
+.popup {
+    display: none;
+    position: absolute;
+    background-color: var(--bg);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 132, 0, 0.3);
+    padding: 12px 16px;
+    z-index: 1;
+    bottom: 60px;
+    right: 10px;
+    border-radius: 10px;
+}
+.controls:hover .popup {
+    display: block;
+}
+input {
+    font-size: 25px;
+    width: 2ch;
+    border: none;
 }

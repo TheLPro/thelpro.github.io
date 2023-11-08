@@ -49,11 +49,16 @@
             <canvas id="skin_container" data-engine="three.js r156" width="800" height="800"></canvas>
         </div>
     </div>
+    
     <div class="controls">
-        <span id="idle"><i class="fa-solid fa-person" style="color: var(--accent);"></i></span>
-        <span id="walk"><i class="fa-solid fa-person-walking" style="color: var(--accent);"></i></span>
-        <span id="run"><i class="fa-solid fa-person-running" style="color: var(--accent);"></i></span>
-        <span id="fly"><i class="fa-solid fa-plane" style="color: var(--accent);"></i></span>
+        <span id="settings"><i class="fa-solid fa-gear" style="color: var(--accent)"></i></span>
+        <div class="popup">
+            <input type="text" id="speed" value="1"/>
+            <span id="idle"><i class="fa-solid fa-person" style="color: var(--accent);"></i></span>
+            <span id="walk"><i class="fa-solid fa-person-walking" style="color: var(--accent);"></i></span>
+            <span id="run"><i class="fa-solid fa-person-running" style="color: var(--accent);"></i></span>
+            <span id="fly"><i class="fa-solid fa-plane" style="color: var(--accent);"></i></span>
+        </div>
     </div>
     <button id="theme" style="display: none;"></button>
     <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
@@ -83,6 +88,7 @@
         var walk = document.getElementById("walk");
         var run = document.getElementById("run");
         var fly = document.getElementById("fly");
+        var speed = document.getElementById("speed");
 
         idle.addEventListener("click", function() {
             skinViewer.animation = new skinview3d.IdleAnimation();
@@ -108,7 +114,9 @@
             skinViewer.animation.speed = 1;
             skinViewer.loadCape("img/mojang_cape.png", {backEquipment: "elytra"});
         });
-
+        speed.addEventListener("change", function() {
+            skinViewer.animation.speed = speed.value;
+        });
 
     </script>
     <script src="https://kit.fontawesome.com/c23c5103b5.js" crossorigin="anonymous"></script>
