@@ -137,3 +137,6 @@ input {
     width: 2ch;
     border: none;
 }
+input:focus {
+    outline: none;
+}
