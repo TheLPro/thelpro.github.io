@@ -61,11 +61,11 @@ console.log(window.innerWidth);
 
 contact.addEventListener("click", function() {
 
-    alert("Working on it! (Contact me TheLPro on Discord)")
+    alert("Contact me TheLPro on Discord");
 
 });
 about.addEventListener("click", function() {
 
-    alert("Working on it!")
+    window.location.href = "https://github.com/TheLPro";
 
 });
