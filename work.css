@@ -24,7 +24,7 @@ section {
 .container {
     position: relative;
     width: 60%;
-    height: 65%;
+    height: 80%;
     background-color: #fff;
     border: 2px solid var(--accent);
     border-radius: 10px;
