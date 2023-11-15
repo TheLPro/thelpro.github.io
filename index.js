@@ -66,6 +66,6 @@ contact.addEventListener("click", function() {
 });
 about.addEventListener("click", function() {
 
-    window.open("https://github.com/TheLPro", "_blank");
+    window.open("/projects.html", "_self");
 
 });

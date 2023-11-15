@@ -158,3 +158,32 @@ input {
 input:focus {
     outline: none;
 }
+
+/* Projects */
+
+h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--accent);
+    z-index: 1000;
+    margin-inline: 20px;
+}
+.pcontainer {
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    margin-inline: 10px;
+    justify-content: space-evenly;
+    overflow: scroll;
+}
+.pbox {
+    background-color: #ffdbb1;
+    padding: 20px;
+    border-radius: 10px;
+}
+.pimage {
+    border-radius: 10000px;
+}
+.pimage .noround {
+    border-radius: 0px;
+}
