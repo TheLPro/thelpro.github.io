@@ -47,6 +47,8 @@ function copyText(text) {
     storage.setSelectionRange(0, 99999);
     document.execCommand('copy');
     document.body.removeChild(storage);
+
+    alert("Discord copied to clipboard!");
   }
 
 button.addEventListener("click", buttonClick);
