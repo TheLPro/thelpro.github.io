@@ -51,21 +51,27 @@ function copyText(text) {
     alert("Discord copied to clipboard!");
   }
 
-button.addEventListener("click", buttonClick);
-moon.addEventListener("click", moonClick);
-sun.addEventListener("click", sunClick);	
+if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects")) {
+    button.addEventListener("click", buttonClick);
+    moon.addEventListener("click", moonClick);
+    sun.addEventListener("click", sunClick);	
+}
 console.log(window.innerWidth);
 
-contact.addEventListener("click", function() {
-    copyText("thelpro");
-});
-about.addEventListener("click", function() {
-    if (lhCheck()) {
-        window.open("/projects.html", "_self");
-    } else {
-        window.open("/projects", "_self");
-    }
-});
+if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects")) {
+    contact.addEventListener("click", function() {
+      copyText("thelpro");
+    });
+}
+if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects")) {
+    about.addEventListener("click", function() {
+      if (lhCheck()) {
+          window.open("/projects.html", "_self");
+       } else {
+           window.open("/projects", "_self");
+       }
+    });
+}
 function home() {
     if (lhCheck()) {
         window.open("/index.html", "_self");
