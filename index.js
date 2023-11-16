@@ -70,7 +70,7 @@ document.querySelector('#home').addEventListener("click", function() {
     if (lhCheck()) {
         window.open("/index.html", "_self");
     } else {
-        window.open("/index", "_self");
+        window.open("https://thelpro.studio", "_self");
     }
 });
 function link(url) {
