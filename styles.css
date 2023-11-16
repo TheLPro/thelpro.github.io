@@ -269,7 +269,7 @@ input:focus {
       }
   }
   @media screen and (max-width:799px){
-    .custom-model-inner{margin-top: 45px;}
+    .custom-model-inner{display: none;}
   }
   
 /* Projects */

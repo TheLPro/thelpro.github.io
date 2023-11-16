@@ -47,7 +47,6 @@ function copyText(text) {
     storage.setSelectionRange(0, 99999);
     document.execCommand('copy');
     document.body.removeChild(storage);
-    alert('Discord copied to clipboard!');
   }
 
 button.addEventListener("click", buttonClick);
@@ -56,8 +55,12 @@ sun.addEventListener("click", sunClick);
 console.log(window.innerWidth);
 
 contact.addEventListener("click", function() {
-    //copyText("thelpro");
-    document.querySelector('.custom-model-main').classList.add('model-open');
+    copyText("thelpro");
+    if (!window.innerWidth < 800) {
+        document.querySelector('.custom-model-main').classList.add('model-open');
+    } else {
+        alert("Discord copied to clipboard!");
+    }
 });
 about.addEventListener("click", function() {
 
