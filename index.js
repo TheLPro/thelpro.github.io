@@ -69,3 +69,7 @@ about.addEventListener("click", function() {
     window.open("/projects.html", "_self");
 
 });
+
+function link(url) {
+    window.location.href = url;
+}

@@ -165,19 +165,51 @@ body.scroll {
     overflow: scroll;
 }
 
-h1.proj {
-    font-weight: bold;
-    font-size: 3rem;
-    color: var(--accent);
+.top {
     z-index: 1000;
     margin-inline: 20px;
     position: fixed;
     width: 100%;
-    margin-top: 0;
-    padding: 10px;
+    top: 0;
+    margin-left: 0;
     background-color: var(--bg);
 }
-
+h1.proj {
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--accent);
+    margin-top: 0;
+    margin-left: 20px;
+}
+  .back {
+    top: 2px;
+    margin-left: 8px;
+    position: relative;
+    color: var(--text);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #000;
+  }
+  
+  a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+  
+  a:hover::before {
+    transform: scaleX(1);
+  }
 .pcontainer {
     display: flex;
     gap: 30px;
@@ -185,7 +217,7 @@ h1.proj {
     margin-inline: 10px;
     padding-bottom: 100px;
     justify-content: center;
-    overflow: scroll;
+    overflow:visible;
     margin-top: 110px;
 }
 .pbox {
@@ -197,6 +229,15 @@ h1.proj {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+.pbox:hover {
+   transform: scale(1.05);
+}
+.pbox:active {
+    transform: scale(0.95);
 }
 .pimage {
     border-radius: 10000px;
@@ -207,4 +248,9 @@ h1.proj {
 }
 .ptitle {
     font-size: 1.3rem;
+}
+@media screen and (max-width: 540px) {
+    .pbox {
+        width: 80%;
+    }
 }
