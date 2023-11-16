@@ -56,11 +56,6 @@ console.log(window.innerWidth);
 
 contact.addEventListener("click", function() {
     copyText("thelpro");
-    if (!window.innerWidth < 800) {
-        document.querySelector('.custom-model-main').classList.add('model-open');
-    } else {
-        alert("Discord copied to clipboard!");
-    }
 });
 about.addEventListener("click", function() {
 
@@ -75,9 +70,3 @@ about.addEventListener("click", function() {
 function link(url) {
     window.location.href = url;
 }
-document.querySelector('.close-btn').addEventListener("click", function() {
-    document.querySelector('.custom-model-main').classList.remove('model-open');
-});
-document.querySelector('.bg-overlay').addEventListener("click", function() {
-    document.querySelector('.custom-model-main').classList.remove('model-open');
-});
