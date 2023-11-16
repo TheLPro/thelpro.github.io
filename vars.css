@@ -4,12 +4,21 @@
     src: url('assets/minecraft.woff2') format('woff2');
 }
 
-:root {
+body[data-theme='light'] {
     --code: 'Source Code Pro';
     --font: 'Sarala';
-    --text: #4e2a00;
+    --text: #1d1812;
     --bg: #FFFDFB;
-    --primary: #F49434;
-    --secondary: #8DCFCF;
+    --primary: #ff9c27;
+    --secondary: #8dcfcf;
+    --accent: #FF8400;
+}
+body[data-theme='dark'] {
+    --code: 'Source Code Pro';
+    --font: 'Sarala';
+    --text: #FEFDFB;
+    --bg: #212225;
+    --primary: #eb7f00;
+    --secondary: #398186;
     --accent: #FF8400;
 }

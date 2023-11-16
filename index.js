@@ -8,36 +8,19 @@ const about = document.querySelector("#about");
 const contact = document.querySelector("#contact");
 window.localStorage.setItem("theme", "light");
 
-var light = new Map();
-light.set("--text", "#040301");
-light.set("--bg", "#FFFDFB");
-light.set("--primary", "#F49434");
-light.set("--secondary", "#8DCFCF");
-
-var dark = new Map();
-
-dark.set("--text", "#FEFDFB");
-dark.set("--bg", "#212225");
-dark.set("--primary", "#CB6B0B");
-dark.set("--secondary", "#347A7A");
+function lhCheck () {return window.location.href.includes("127.0.0.1") || window.location.href.includes("localhost");}
 
 function buttonClick() {
     console.log("hi")
     if (window.localStorage.getItem("theme") == "light") {
-        for (let [key, value] of dark) {
-            document.documentElement.style.setProperty(key, value);
-        }
+        document.body.setAttribute('data-theme', 'dark');
         updateTheme("dark");
-        button.innerHTML = "Dark";
     } else if (window.localStorage.getItem("theme") == "dark") {
-        for (let [key, value] of light) {
-            document.documentElement.style.setProperty(key, value);
-        }
+        document.body.setAttribute('data-theme', 'light');
         updateTheme("light");
-        button.innerHTML = "Light";
     }
 }
-
+document.body.setAttribute('data-theme', 'light');
 function moonClick() {
     buttonClick();
     moon.style.display = "none";
@@ -54,22 +37,44 @@ function updateTheme(theme) {
     window.localStorage.setItem("theme", theme);
 }
 
+function copyText(text) {
+    const storage = document.createElement('textarea');
+    storage.value = text;
+    document.body.appendChild(storage);
+  
+    // Copy the text in the fake `textarea` and remove the `textarea`
+    storage.select();
+    storage.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+    document.body.removeChild(storage);
+    alert('Discord copied to clipboard!');
+  }
+
 button.addEventListener("click", buttonClick);
 moon.addEventListener("click", moonClick);
 sun.addEventListener("click", sunClick);	
 console.log(window.innerWidth);
 
 contact.addEventListener("click", function() {
-
-    alert("Contact me TheLPro on Discord");
-
+    //copyText("thelpro");
+    document.querySelector('.custom-model-main').classList.add('model-open');
 });
 about.addEventListener("click", function() {
 
-    window.open("/projects.html", "_self");
+    if (lhCheck()) {
+        window.open("/projects.html", "_self");
+    } else {
+        window.open("/projects", "_self");
+    }
 
 });
 
 function link(url) {
     window.location.href = url;
 }
+document.querySelector('.close-btn').addEventListener("click", function() {
+    document.querySelector('.custom-model-main').classList.remove('model-open');
+});
+document.querySelector('.bg-overlay').addEventListener("click", function() {
+    document.querySelector('.custom-model-main').classList.remove('model-open');
+});
