@@ -60,15 +60,19 @@ contact.addEventListener("click", function() {
     copyText("thelpro");
 });
 about.addEventListener("click", function() {
-
     if (lhCheck()) {
         window.open("/projects.html", "_self");
     } else {
         window.open("/projects", "_self");
     }
-
 });
-
+document.querySelector('#home').addEventListener("click", function() {
+    if (lhCheck()) {
+        window.open("/index.html", "_self");
+    } else {
+        window.open("/index", "_self");
+    }
+});
 function link(url) {
     window.location.href = url;
 }
