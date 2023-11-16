@@ -66,13 +66,13 @@ about.addEventListener("click", function() {
         window.open("/projects", "_self");
     }
 });
-document.querySelector('#home').addEventListener("click", function() {
+function home() {
     if (lhCheck()) {
         window.open("/index.html", "_self");
     } else {
         window.open("https://thelpro.studio", "_self");
     }
-});
+}
 function link(url) {
     window.location.href = url;
 }

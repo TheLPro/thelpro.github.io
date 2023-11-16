@@ -178,6 +178,7 @@ nav {
     width: 100%;
     height: 100px;
     background-color: var(--bg);
+    cursor: pointer;
 }
 h1.proj {
     font-weight: bold;
@@ -195,7 +196,8 @@ h1.proj {
 }
 a {
     text-decoration: none;
-    color: var(--text)
+    color: var(--text);
+    cursor: pointer;
 }
   
 a::before {
