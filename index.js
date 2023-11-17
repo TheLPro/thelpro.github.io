@@ -80,5 +80,5 @@ function home() {
     }
 }
 function link(url) {
-    window.location.href = url;
+    window.open(url, "_blank");
 }
