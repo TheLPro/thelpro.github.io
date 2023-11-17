@@ -80,5 +80,8 @@ function home() {
     }
 }
 function link(url) {
+    if (url == "https://thelpro.studio") {
+        window.open("https://thelpro.studio", "_self");
+    }
     window.open(url, "_blank");
 }
