@@ -6,7 +6,9 @@ const moon = document.querySelector("#dark");
 const sun = document.querySelector("#light");
 const about = document.querySelector("#about");
 const contact = document.querySelector("#contact");
-window.localStorage.setItem("theme", "light");
+if (!localStorage.includes("theme")) {
+    localStorage.setItem("theme", "light");
+}
 
 function lhCheck () {return window.location.href.includes("127.0.0.1") || window.location.href.includes("localhost");}
 
