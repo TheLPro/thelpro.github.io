@@ -119,7 +119,7 @@ button {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     background-color: var(--bg);
-    border: 2px solid;
+    border: 3px solid;
     padding: 15px 40px 15px 40px;
     font-size: 2rem;
     text-wrap: nowrap;
