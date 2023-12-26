@@ -6,11 +6,11 @@ const moon = document.querySelector("#dark");
 const sun = document.querySelector("#light");
 const about = document.querySelector("#about");
 const contact = document.querySelector("#contact");
-if (!localStorage.includes("theme")) {
-    localStorage.setItem("theme", "light");
+if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "dark");
 }
 
-function lhCheck () {return window.location.href.includes("127.0.0.1") || window.location.href.includes("localhost");}
+function lhCheck () {return window.location.href.includes(":");}
 
 function buttonClick() {
     console.log("hi")
@@ -22,7 +22,7 @@ function buttonClick() {
         updateTheme("light");
     }
 }
-document.body.setAttribute('data-theme', 'light');
+document.body.setAttribute('data-theme', window.localStorage.getItem("theme"));
 function moonClick() {
     buttonClick();
     moon.style.display = "none";
@@ -53,19 +53,19 @@ function copyText(text) {
     alert("Discord copied to clipboard!");
   }
 
-if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects")) {
+if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects") || !window.location.href.includes("about")) {
     button.addEventListener("click", buttonClick);
     moon.addEventListener("click", moonClick);
     sun.addEventListener("click", sunClick);	
 }
 console.log(window.innerWidth);
 
-if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects")) {
+if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects") || !window.location.href.includes("about")) {
     contact.addEventListener("click", function() {
       copyText("thelpro");
     });
 }
-if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects")) {
+if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects") || !window.location.href.includes("about")) {
     about.addEventListener("click", function() {
       if (lhCheck()) {
           window.open("/projects.html", "_self");

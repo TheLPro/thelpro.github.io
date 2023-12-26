@@ -36,7 +36,7 @@ html, body {
     font-weight: bold;
     font-size: 5rem;
     margin-top: 17vh;
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     color: var(--primary);
     z-index: 1000;
 }
@@ -112,18 +112,66 @@ canvas:active {
     gap: 1rem;
 }
 button {
-    border-radius: 10px;
-    border: none;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-color: var(--bg);
+    border: 2px solid;
+    padding: 15px 40px 15px 40px;
+    font-size: 2rem;
+    text-wrap: nowrap;
     color: var(--text);
-    padding: 15px 20px 15px 20px;
-    font-size: 1.7rem;
-    cursor: pointer;
-}
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+  
+  button:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  
+  button::after {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  
+  button:active {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(0.95);
+  }
 #about {
-    background-color: var(--primary);
+    border-color: var(--secondary);
 }
 #contact {
+    border-color: var(--primary);
+}
+#about:hover::before {
     background-color: var(--secondary);
+}
+#contact:hover::before {
+    background-color: var(--primary);
 }
 .controls {
     display: block;
@@ -178,7 +226,7 @@ nav {
     width: 100%;
     height: 100px;
     background-color: var(--bg);
-    cursor: pointer;
+    cursor: unset;
 }
 h1.proj {
     font-weight: bold;
@@ -259,6 +307,7 @@ a:hover::before {
 }
 .ptitle {
     font-size: 1.3rem;
+    color: var(--bg);
 }
 @media screen and (max-width: 540px) {
     .pbox {
