@@ -307,7 +307,7 @@ a:hover::before {
 }
 .ptitle {
     font-size: 1.3rem;
-    color: var(--bg);
+    color: black;
 }
 @media screen and (max-width: 540px) {
     .pbox {
