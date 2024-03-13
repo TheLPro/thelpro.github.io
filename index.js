@@ -62,7 +62,11 @@ console.log(window.innerWidth);
 
 if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects") || !window.location.href.includes("about")) {
     contact.addEventListener("click", function() {
-      copyText("thelpro");
+        if (lhCheck()) {
+            window.open("/contact.html", "_self");
+         } else {
+             window.open("/contact", "_self");
+         }
     });
 }
 if (window.location.href.includes("thelpro") || window.location.href.includes("index") || !window.location.href.includes("projects") || !window.location.href.includes("about")) {

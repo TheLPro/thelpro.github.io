@@ -3,10 +3,11 @@
     font-family: 'Minecraft';
     src: url('assets/minecraft.woff2') format('woff2');
 }
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
 
 body[data-theme='light'] {
     --code: 'Source Code Pro';
-    --font: 'Sarala';
+    --font: "Rethink Sans";
     --text: #1d1812;
     --bg: #FFFDFB;
     --primary: #ff9c27;
@@ -15,7 +16,7 @@ body[data-theme='light'] {
 }
 body[data-theme='dark'] {
     --code: 'Source Code Pro';
-    --font: 'Sarala';
+    --font: "Rethink Sans";
     --text: #FEFDFB;
     --bg: #212225;
     --primary: #eb7f00;
