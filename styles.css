@@ -121,8 +121,8 @@ button {
     transition-duration: 0.3s;
     background-color: var(--bg);
     border: 3px solid;
-    padding: 15px 40px 15px 40px;
-    font-size: 2rem;
+    padding: 10px 30px 10px 30px;
+    font-size: 1.7rem;
     text-wrap: nowrap;
     color: var(--text);
   }
