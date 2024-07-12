@@ -351,3 +351,21 @@ a:hover::before {
     letter-spacing: -2px;
     font-family: var(--font);
 }
+@keyframes jump-shaking {
+    0% { transform: translateX(0) }
+    40% { transform: translateX(0) }
+    55% { transform: translateY(-9px) }
+    60% { transform: translateY(-9px) rotate(9deg) }
+    65% { transform: translateY(-9px) rotate(-9deg) }
+    70% { transform: translateY(-9px) rotate(9deg) }
+    75% { transform: translateY(-9px) rotate(-9deg) }
+    100% { transform: translateY(0) rotate(0) }
+  }
+#shake {
+    z-index: 1000000;
+    animation: jump-shaking 3s infinite;
+    transition: all 0.4s ease;
+}
+#shake:hover {
+    animation: none;
+}
