@@ -36,8 +36,8 @@ html, body {
 .title {
     font-weight: bold;
     font-size: 5rem;
-    margin-top: 17vh;
-    margin-bottom: 0%;
+    margin-top: 20vh;
+    margin-bottom: -10px;
     color: var(--primary);
     z-index: 1000;
 }
@@ -362,7 +362,7 @@ a:hover::before {
     100% { transform: translateY(0) rotate(0) }
   }
 #shake {
-    z-index: 1000000;
+    z-index: 10;
     animation: jump-shaking 3s infinite;
     transition: all 0.4s ease;
 }
